@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate — ILDA</title>
+    <meta name="description" content="Verify the authenticity of your ILDA traceability certificate. Enter your certificate number to access the full traceability record.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ilda-navy': '#1a365d',
+                        'ilda-navy-dark': '#0f1f35',
+                        'ilda-gold': '#c5a059',
+                        'ilda-gold-light': '#d4b87a',
+                        'ilda-gray': '#f7f8fa',
+                        'ilda-text': '#2d3748',
+                        'ilda-text-light': '#718096'
+                    },
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>body { font-family: 'Inter', system-ui, sans-serif; }</style>
+</head>
+<body class="bg-ilda-gray text-ilda-text antialiased">
+
+    <nav class="bg-ilda-navy text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-ilda-gold rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">IL</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-lg tracking-tight">ILDA</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
+                    <a href="traceability.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Traceability</a>
+                    <a href="members.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Certified Members</a>
+                    <a href="verify.html" class="bg-ilda-gold text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-ilda-gold-light transition-colors">Verify Certificate</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-ilda-navy text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Verify Your Certificate</h1>
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    Enter your ILDA traceability certificate number to confirm authenticity and view the complete traceability record.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-ilda-navy rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-ilda-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-ilda-navy mb-2">Certificate Verification</h2>
+                    <p class="text-ilda-text-light">Enter your certificate number below</p>
+                </div>
+
+                <form id="verify-form" class="space-y-6">
+                    <div>
+                        <label for="cert-number" class="block text-sm font-medium text-ilda-navy mb-2">Certificate Number</label>
+                        <input 
+                            type="text" 
+                            id="cert-number" 
+                            name="cert-number"
+                            placeholder="e.g., ILDA-2026-001-ABC123" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ilda-gold focus:border-ilda-gold outline-none transition-all text-lg uppercase tracking-wider"
+                        >
+                        <p class="text-xs text-ilda-text-light mt-2">Your certificate number is printed on the traceability certificate card.</p>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-ilda-gold text-white py-4 rounded-lg font-medium text-lg hover:bg-ilda-gold-light transition-colors flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                        Verify Certificate
+                    </button>
+                </form>
+
+                <div id="result-area" class="hidden mt-8">
+                    <div id="result-content"></div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-white rounded-2xl shadow-sm p-6">
+                <h3 class="font-bold text-ilda-navy mb-4">What You'll See</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Certificate Status</span>
+                            <p class="text-ilda-text-light text-xs">Active, expired, or revoked</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Carbon Source</span>
+                            <p class="text-ilda-text-light text-xs">Type of biological sample (hair, fur, ashes)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Laboratory</span>
+                            <p class="text-ilda-text-light text-xs">Certified member laboratory that produced the diamond</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Gemological Data</span>
+                            <p class="text-ilda-text-light text-xs">IGI/GIA report number and 4C parameters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ilda-navy-dark text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">© 2026 International Life Diamond Association. All rights reserved.</p>
+                <p class="text-sm">Hong Kong Registered Association</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('verify-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const certNumber = document.getElementById('cert-number').value.trim().toUpperCase();
+            const resultArea = document.getElementById('result-area');
+            const resultContent = document.getElementById('result-content');
+            
+            resultArea.classList.remove('hidden');
+            
+            // Demo: show placeholder result for ILDA-2026-001-XXXX format
+            if (certNumber.startsWith('ILDA-2026')) {
+                resultContent.innerHTML = `
+                    <div class="border border-green-200 rounded-xl p-6 bg-green-50">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-green-800">Certificate Verified</p>
+                                <p class="text-sm text-green-600">Valid and active</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 border-b border-green-100">
+                                <span class="text-gray-600">Certificate Number</span>
+                                <span class="font-medium">${certNumber}</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-green-100">
+                                <span class="text-gray-600">Laboratory</span>
+                                <span class="font-medium">BioGem Lab</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-green-100">
+                                <span class="text-gray-600">Carbon Source</span>
+                                <span class="font-medium">Pet Fur (Hair)</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-green-100">
+                                <span class="text-gray-600">Diamond Weight</span>
+                                <span class="font-medium">0.5 carat</span>
+                            </div>
+                            <div class="flex justify-between py-2">
+                                <span class="text-gray-600">Gemological Report</span>
+                                <span class="font-medium">IGI #LG12345678</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-4 bg-white rounded-lg border border-green-100">
+                            <p class="text-xs text-gray-500 mb-2">Traceability Statement</p>
+                            <p class="text-sm text-gray-700">This diamond has been certified by the International Life Diamond Association as traceable from biological carbon source to finished gem. The laboratory documentation has been reviewed and meets ILDA's chain-of-custody standards.</p>
+                        </div>
+                    </div>
+                `;
+            } else if (certNumber) {
+                resultContent.innerHTML = `
+                    <div class="border border-yellow-200 rounded-xl p-6 bg-yellow-50">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-yellow-800">Certificate Not Found</p>
+                                <p class="text-sm text-yellow-600">We could not find a certificate with this number. Please check the number and try again.</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+    </script>
+
+</body>
+</html>

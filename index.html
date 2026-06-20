@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Life Diamond Association (ILDA)</title>
+    <meta name="description" content="International Life Diamond Association — Independent third-party traceability certification for life diamonds. Verify the origin of your memorial and life diamonds.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ilda-navy': '#1a365d',
+                        'ilda-navy-dark': '#0f1f35',
+                        'ilda-gold': '#c5a059',
+                        'ilda-gold-light': '#d4b87a',
+                        'ilda-gray': '#f7f8fa',
+                        'ilda-text': '#2d3748',
+                        'ilda-text-light': '#718096'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Inter', system-ui, sans-serif; }
+        }
+        @layer components {
+            .btn-primary {
+                @apply bg-ilda-gold text-white px-8 py-3 rounded-lg font-medium 
+                       hover:bg-ilda-gold-light transition-all duration-300 
+                       inline-flex items-center gap-2;
+            }
+            .section-title {
+                @apply text-3xl md:text-4xl font-bold text-ilda-navy mb-4;
+            }
+            .section-subtitle {
+                @apply text-lg text-ilda-text-light max-w-2xl mx-auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-ilda-text antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-ilda-navy text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-ilda-gold rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">IL</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-lg tracking-tight">
+                        ILDA
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
+                    <a href="traceability.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Traceability</a>
+                    <a href="members.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Certified Members</a>
+                    <a href="verify.html" class="bg-ilda-gold text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-ilda-gold-light transition-colors">Verify Certificate</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="about.html" class="block py-2 text-gray-300 hover:text-white">About</a>
+                <a href="traceability.html" class="block py-2 text-gray-300 hover:text-white">Traceability</a>
+                <a href="members.html" class="block py-2 text-gray-300 hover:text-white">Certified Members</a>
+                <a href="verify.html" class="block py-2 text-ilda-gold font-medium">Verify Certificate</a>
+                <a href="contact.html" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-ilda-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(197,160,89,0.3),transparent_50%)]"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 mb-6">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-sm text-gray-300">Independent Third-Party Certification</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Trace the Origin.<br>
+                    <span class="text-ilda-gold">Trust the Journey.</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+                    The International Life Diamond Association provides independent traceability certification 
+                    for life diamonds — ensuring every stone's origin is verified, documented, and accessible.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="verify.html" class="btn-primary">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Verify a Certificate
+                    </a>
+                    <a href="about.html" class="px-8 py-3 rounded-lg font-medium border border-white/30 text-white hover:bg-white/10 transition-all duration-300">
+                        Learn About ILDA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-ilda-gray border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-ilda-navy">1</div>
+                    <div class="text-sm text-ilda-text-light mt-1">Certified Member</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-ilda-navy">100%</div>
+                    <div class="text-sm text-ilda-text-light mt-1">Traceability Rate</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-ilda-navy">4</div>
+                    <div class="text-sm text-ilda-text-light mt-1">Continents Served</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-ilda-navy">∞</div>
+                    <div class="text-sm text-ilda-text-light mt-1">Certificate Queries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">What ILDA Does</h2>
+                <p class="section-subtitle">
+                    We are an independent non-profit association dedicated to bringing transparency 
+                    and trust to the life diamond industry through rigorous third-party certification.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-ilda-gray rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-ilda-navy rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-ilda-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ilda-navy mb-3">Third-Party Certification</h3>
+                    <p class="text-ilda-text-light leading-relaxed">
+                        Independent verification of carbon source, laboratory process, and gemological 
+                        specifications. No vested interest in sales — only in truth.
+                    </p>
+                </div>
+                
+                <div class="bg-ilda-gray rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-ilda-navy rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-ilda-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ilda-navy mb-3">Public Verification</h3>
+                    <p class="text-ilda-text-light leading-relaxed">
+                        Every certified diamond receives a unique traceability certificate with a 
+                        QR code and online verification portal. Anyone can confirm authenticity instantly.
+                    </p>
+                </div>
+                
+                <div class="bg-ilda-gray rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-ilda-navy rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-ilda-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-ilda-navy mb-3">Standard Setting</h3>
+                    <p class="text-ilda-text-light leading-relaxed">
+                        We establish and maintain industry standards for traceability documentation, 
+                        laboratory audit protocols, and consumer disclosure requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-ilda-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">How Traceability Works</h2>
+                <p class="section-subtitle">
+                    A rigorous, transparent process from carbon source to certified diamond.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-ilda-navy mb-2">Carbon Receipt</h3>
+                    <p class="text-sm text-ilda-text-light">Biological sample logged with unique chain-of-custody ID</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-ilda-navy mb-2">Lab Processing</h3>
+                    <p class="text-sm text-ilda-text-light">Carbon extraction and diamond synthesis under documented conditions</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-ilda-navy mb-2">Gemological Grading</h3>
+                    <p class="text-sm text-ilda-text-light">Independent gemological analysis (IGI/GIA) with documented parameters</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-ilda-navy mb-2">ILDA Certification</h3>
+                    <p class="text-sm text-ilda-text-light">Traceability certificate issued with unique verification code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-ilda-navy text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Verify a Certificate?</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Enter your certificate number or scan the QR code on your diamond's documentation 
+                to access the full traceability record.
+            </p>
+            <a href="verify.html" class="btn-primary text-lg px-10 py-4">
+                Start Verification
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ilda-navy-dark text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-ilda-gold rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">IL</span>
+                        </div>
+                        <span class="text-white font-semibold">ILDA</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        International Life Diamond Association<br>
+                        Independent third-party certification for life diamonds.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About ILDA</a></li>
+                        <li><a href="traceability.html" class="hover:text-white transition-colors">Traceability</a></li>
+                        <li><a href="members.html" class="hover:text-white transition-colors">Certified Members</a></li>
+                        <li><a href="verify.html" class="hover:text-white transition-colors">Verify Certificate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Certificate Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">For Laboratories</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Industry Standards</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>info@lifediamondassociation.org</li>
+                        <li><a href="contact.html" class="text-ilda-gold hover:text-ilda-gold-light transition-colors">Contact Form →</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">
+                    © 2026 International Life Diamond Association. All rights reserved.
+                </p>
+                <p class="text-sm">
+                    Hong Kong Registered Association
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

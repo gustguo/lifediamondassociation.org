@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certified Members — ILDA</title>
+    <meta name="description" content="View laboratories certified by the International Life Diamond Association. Each member has passed our annual traceability audit.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ilda-navy': '#1a365d',
+                        'ilda-navy-dark': '#0f1f35',
+                        'ilda-gold': '#c5a059',
+                        'ilda-gold-light': '#d4b87a',
+                        'ilda-gray': '#f7f8fa',
+                        'ilda-text': '#2d3748',
+                        'ilda-text-light': '#718096'
+                    },
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>body { font-family: 'Inter', system-ui, sans-serif; }</style>
+</head>
+<body class="bg-white text-ilda-text antialiased">
+
+    <nav class="bg-ilda-navy text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-ilda-gold rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">IL</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-lg tracking-tight">ILDA</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
+                    <a href="traceability.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Traceability</a>
+                    <a href="members.html" class="text-white font-medium text-sm">Certified Members</a>
+                    <a href="verify.html" class="bg-ilda-gold text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-ilda-gold-light transition-colors">Verify Certificate</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-ilda-navy text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Certified Members</h1>
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    Laboratories that have passed ILDA's annual traceability audit and meet our 
+                    documentation and process standards.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-12">
+                <div class="flex items-center gap-2 bg-green-50 text-green-700 rounded-full px-4 py-2 inline-flex text-sm font-medium">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    1 Active Certified Member
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-ilda-navy rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">B</span>
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Active</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-ilda-navy mb-1">BioGem Lab</h3>
+                    <p class="text-sm text-ilda-text-light mb-4">Luoyang, China</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-ilda-text-light">Certification:</span>
+                            <span class="font-medium">ILDA-2026-001</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-ilda-text-light">Audit Date:</span>
+                            <span class="font-medium">2026-06-15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-ilda-text-light">Next Audit:</span>
+                            <span class="font-medium">2027-06-15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-ilda-text-light">Traceability:</span>
+                            <span class="font-medium text-green-600">Verified</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <a href="https://www.biogemlab.com" target="_blank" class="text-ilda-gold text-sm font-medium hover:text-ilda-gold-light transition-colors">
+                            Visit Website →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border border-dashed border-gray-300 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-64">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-500 text-sm font-medium">Apply for Certification</p>
+                    <p class="text-gray-400 text-xs mt-1">Contact us to begin the audit process</p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-ilda-gray rounded-2xl p-8">
+                <h3 class="text-xl font-bold text-ilda-navy mb-4">Becoming a Certified Member</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-10 h-10 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center font-bold mx-auto mb-2">1</div>
+                        <p class="text-sm font-medium text-ilda-navy">Application</p>
+                        <p class="text-xs text-ilda-text-light mt-1">Submit laboratory documentation</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-10 h-10 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center font-bold mx-auto mb-2">2</div>
+                        <p class="text-sm font-medium text-ilda-navy">Documentation Review</p>
+                        <p class="text-xs text-ilda-text-light mt-1">ILDA reviews chain-of-custody records</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-10 h-10 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center font-bold mx-auto mb-2">3</div>
+                        <p class="text-sm font-medium text-ilda-navy">On-site Audit</p>
+                        <p class="text-xs text-ilda-text-light mt-1">Physical inspection of processes</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-10 h-10 bg-ilda-navy text-ilda-gold rounded-full flex items-center justify-center font-bold mx-auto mb-2">4</div>
+                        <p class="text-sm font-medium text-ilda-navy">Certification</p>
+                        <p class="text-xs text-ilda-text-light mt-1">Issued upon successful completion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ilda-navy-dark text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">© 2026 International Life Diamond Association. All rights reserved.</p>
+                <p class="text-sm">Hong Kong Registered Association</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
