@@ -357,6 +357,18 @@ body {
   color: #d1d5db;
 }
 
+@media (max-width: 767px) {
+  .nav-logo .font-serif {
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+  }
+  .nav-logo .text-sub {
+    font-size: 0.4rem;
+    letter-spacing: 0.12em;
+    margin-top: 0.3rem;
+  }
+}
+
 .nav-links {
   display: none;
   list-style: none;
