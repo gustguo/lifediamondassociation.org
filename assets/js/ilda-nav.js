@@ -23,52 +23,6 @@
       ],
       cta: 'Verify Certificate',
       ctaHref: 'standards/verify.html'
-    },
-    zh: {
-      logo: 'ILDA',
-      links: [
-        { label: '关于', href: 'about/mission.html', children: [
-          { label: '使命', href: 'about/mission.html' },
-          { label: '治理', href: 'about/governance.html' }
-        ]},
-        { label: '标准', href: 'standards/traceability.html', children: [
-          { label: '追溯', href: 'standards/traceability.html' },
-          { label: '验证', href: 'standards/verify.html' }
-        ]},
-        { label: '会员', href: 'membership/directory.html', children: [
-          { label: '名录', href: 'membership/directory.html' },
-          { label: '权益', href: 'membership/benefits.html' },
-          { label: '申请', href: 'membership/apply.html' }
-        ]},
-        { label: '新闻', href: 'news/index.html' },
-        { label: '教育', href: 'education/consumer-guide.html' },
-        { label: '联系', href: 'contact.html' }
-      ],
-      cta: '验证证书',
-      ctaHref: 'standards/verify.html'
-    },
-    'zh-hant': {
-      logo: 'ILDA',
-      links: [
-        { label: '關於', href: 'about/mission.html', children: [
-          { label: '使命', href: 'about/mission.html' },
-          { label: '治理', href: 'about/governance.html' }
-        ]},
-        { label: '標準', href: 'standards/traceability.html', children: [
-          { label: '追溯', href: 'standards/traceability.html' },
-          { label: '驗證', href: 'standards/verify.html' }
-        ]},
-        { label: '會員', href: 'membership/directory.html', children: [
-          { label: '名錄', href: 'membership/directory.html' },
-          { label: '權益', href: 'membership/benefits.html' },
-          { label: '申請', href: 'membership/apply.html' }
-        ]},
-        { label: '新聞', href: 'news/index.html' },
-        { label: '教育', href: 'education/consumer-guide.html' },
-        { label: '聯繫', href: 'contact.html' }
-      ],
-      cta: '驗證證書',
-      ctaHref: 'standards/verify.html'
     }
   };
 
@@ -91,49 +45,11 @@
       copy: '© 2026 ILDA. All rights reserved.',
       reg: 'Hong Kong Registered Non-Profit Association'
     },
-    zh: {
-      brand: 'ILDA',
-      desc: '国际生命钻石协会 — 为生命钻石行业提供独立认证与追溯标准。',
-      about: '关于',
-      aboutItems: ['使命', '治理'],
-      aboutLinks: ['about/mission.html', 'about/governance.html'],
-      standards: '标准',
-      standardItems: ['追溯', '验证'],
-      standardLinks: ['standards/traceability.html', 'standards/verify.html'],
-      membership: '会员',
-      memberItems: ['名录', '权益', '申请'],
-      memberLinks: ['membership/directory.html', 'membership/benefits.html', 'membership/apply.html'],
-      resources: '资源',
-      resourceItems: ['新闻', '消费者指南', '联系'],
-      resourceLinks: ['news/index.html', 'education/consumer-guide.html', 'contact.html'],
-      copy: '© 2026 ILDA. 保留所有权利。',
-      reg: '香港注册非营利协会'
-    },
-    'zh-hant': {
-      brand: 'ILDA',
-      desc: '國際生命鑽石協會 — 為生命鑽石行業提供獨立認證與追溯標準。',
-      about: '關於',
-      aboutItems: ['使命', '治理'],
-      aboutLinks: ['about/mission.html', 'about/governance.html'],
-      standards: '標準',
-      standardItems: ['追溯', '驗證'],
-      standardLinks: ['standards/traceability.html', 'standards/verify.html'],
-      membership: '會員',
-      memberItems: ['名錄', '權益', '申請'],
-      memberLinks: ['membership/directory.html', 'membership/benefits.html', 'membership/apply.html'],
-      resources: '資源',
-      resourceItems: ['新聞', '消費者指南', '聯繫'],
-      resourceLinks: ['news/index.html', 'education/consumer-guide.html', 'contact.html'],
-      copy: '© 2026 ILDA. 保留所有權利。',
-      reg: '香港註冊非營利協會'
-    }
+
   };
 
-  // Detect language
-  var pathname = window.location.pathname;
+  // Language is always English
   var lang = 'en';
-  if (pathname.includes('/zh-hant/')) lang = 'zh-hant';
-  else if (pathname.includes('/zh/')) lang = 'zh';
 
   var nav = navData[lang];
   var footer = footerData[lang];
