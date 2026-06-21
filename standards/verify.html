@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify Certificate — International Life Diamond Association</title>
-    <meta name="description" content="Verify the authenticity of an ILDA traceability certificate. Enter the certificate number to view the complete chain-of-custody record.">
+    <meta name="description" content="Verify the authenticity of an ILDA-certified memorial diamond using the Global Registry. Enter the dossier number to retrieve the full certification report.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/ilda.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
 
     <div id="ilda-nav"></div>
 
     <div class="breadcrumb">
         <div class="container">
             <a href="../index.html">Home</a>
-            <span class="breadcrumb-sep">/</span>
-            <a href="traceability.html">Standards</a>
             <span class="breadcrumb-sep">/</span>
             <span class="breadcrumb-current">Verify Certificate</span>
         </div>
@@ -28,49 +26,66 @@
     <section class="page-hero">
         <div class="container">
             <h1>Verify Certificate</h1>
-            <p>Enter your ILDA certificate number to confirm authenticity and view the traceability record.</p>
+            <p>Enter your ILDA dossier number to retrieve the complete certification report, including spectroscopic data and origin verification.</p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container" style="max-width: 600px;">
-            <div class="card" style="text-align: center; padding: 3rem;">
-                <div style="margin-bottom: 2rem;">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--ilda-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
+    <section class="section-charcoal relative overflow-hidden">
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full pointer-events-none"></div>
+        <div class="absolute right-[100px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/5 rounded-full pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="mx-auto mb-6 text-gray-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h2 class="font-serif text-4xl md:text-5xl mb-6">Global Registry</h2>
+            <p class="text-gray-400 font-light text-sm mb-12 max-w-2xl mx-auto leading-relaxed">
+                Every diamond certified by an ILDA-accredited facility carries a unique dossier number. This registry provides public access to the certification status, origin chain summary, and spectroscopic profile.
+            </p>
+
+            <form class="registry-form" onsubmit="return false;">
+                <div class="flex-grow text-left">
+                    <label for="dossier">Dossier / Inscription No.</label>
+                    <input type="text" id="dossier" placeholder="e.g. ILDA-2026-0001">
                 </div>
-                <h2 style="margin-bottom: 1rem;">Certificate Verification</h2>
-                <p style="margin-bottom: 2rem;">Enter the certificate number found on your ILDA traceability certificate.</p>
-                <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                    <input type="text" placeholder="ILDA-2026-XXXX" style="flex: 1; padding: 1rem; border: 2px solid var(--ilda-border); border-radius: 4px; font-size: 1rem; font-family: inherit; text-align: center;">
-                </div>
-                <button class="btn btn-primary" style="width: 100%;">Verify Certificate</button>
-                <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--ilda-gray);">
-                    Certificate numbers are case-sensitive. Example: <strong>ILDA-2026-001</strong>
-                </p>
+                <button type="button" onclick="alert('Global Registry verification system is launching Q3 2026. Contact us for pre-registration.')">
+                    Verify <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="ml-2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </form>
+            <div class="mt-8">
+                <p class="text-xs text-gray-500 mb-4">Registry system launching Q3 2026. Pre-registration available.</p>
+                <a href="../membership/directory.html" class="text-[0.65rem] uppercase tracking-widest text-gray-500 hover:text-gray-300 underline underline-offset-4">View Accredited Laboratory Directory</a>
             </div>
         </div>
     </section>
 
-    <section class="section section-light">
-        <div class="container" style="max-width: 800px;">
-            <h2 style="text-align: center; margin-bottom: 2rem;">What You'll See</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Certificate Details</h3>
-                    <p>Certificate number, issue date, certifying laboratory, and validity status.</p>
-                </div>
-                <div class="card">
-                    <h3>Traceability Summary</h3>
-                    <p>Source type, processing location, synthesis date, and chain-of-custody checkpoints.</p>
-                </div>
-            </div>
+    <section class="section-dark">
+        <div class="max-w-6xl mx-auto content">
+            <h2>What the Registry Contains</h2>
+            <p>Each ILDA dossier includes the following publicly accessible information:</p>
+            <ul>
+                <li><strong>Certification Status</strong> — Active, Suspended, or Revoked</li>
+                <li><strong>Accredited Laboratory</strong> — Name and ILDA accreditation number of the certifying facility</li>
+                <li><strong>Origin Summary</strong> — Type of source material (hair, ashes, etc.) and collection date</li>
+                <li><strong>Spectroscopic Profile</strong> — Raman, FTIR, and UV-Vis results with downloadable spectra</li>
+                <li><strong>Grading Report</strong> — Carat weight, color, clarity, and cut grade (if applicable)</li>
+                <li><strong>Audit Trail</strong> — Chain of custody verification checkpoints</li>
+            </ul>
+
+            <h2>Privacy Boundaries</h2>
+            <p>The registry respects the privacy of the deceased and their families. While spectroscopic and certification data is public, the following information is never disclosed:</p>
+            <ul>
+                <li>Personal names or identifying information of the deceased</li>
+                <li>Purchaser or recipient information</li>
+                <li>Financial transaction details</li>
+                <li>Specific geographic location of the manufacturing facility (beyond country)</li>
+            </ul>
+
+            <h2>Dispute Resolution</h2>
+            <p>If a registry entry appears incorrect or a certificate is questioned, any party may file a dispute with the ILDA Ethics Review Panel. The Panel will independently re-verify the spectroscopic data and chain-of-custody documentation within 30 days.</p>
         </div>
     </section>
 
     <div id="ilda-footer"></div>
 
-  <script src="/assets/js/ilda-nav.js"></script>
+    <script src="../assets/js/ilda-nav.js"></script>
 </body>
 </html>

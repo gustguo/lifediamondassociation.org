@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Directory — International Life Diamond Association</title>
-    <meta name="description" content="Search ILDA's directory of certified member laboratories. All listed laboratories have passed annual traceability audits.">
+    <meta name="description" content="Browse ILDA-accredited memorial diamond laboratories worldwide. All members meet the ILDA Core Standard for certification and traceability.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/ilda.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
 
     <div id="ilda-nav"></div>
 
@@ -19,62 +19,97 @@
         <div class="container">
             <a href="../index.html">Home</a>
             <span class="breadcrumb-sep">/</span>
-            <a href="benefits.html">Membership</a>
-            <span class="breadcrumb-sep">/</span>
             <span class="breadcrumb-current">Member Directory</span>
         </div>
     </div>
 
     <section class="page-hero">
         <div class="container">
-            <h1>Certified Member Directory</h1>
-            <p>All listed laboratories have passed ILDA's annual traceability audit and are authorized to issue ILDA certificates.</p>
+            <h1>Accredited Laboratories</h1>
+            <p>ILDA member laboratories have undergone rigorous third-party audits and maintain compliance with the ILDA Core Standard.</p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="card" style="margin-bottom: 2rem; padding: 1.5rem;"
-                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                    <input type="text" placeholder="Search by laboratory name or country..." style="flex: 1; min-width: 250px; padding: 0.75rem; border: 1px solid var(--ilda-border); border-radius: 4px; font-size: 0.9rem; font-family: inherit;">
-                    <select style="padding: 0.75rem; border: 1px solid var(--ilda-border); border-radius: 4px; font-size: 0.9rem; font-family: inherit;"
-                        <option>All Regions</option>
-                        <option>Asia</option>
-                        <option>North America</option>
-                        <option>Europe</option>
-                        <option>Oceania</option>
-                    </select>
-                    <button class="btn btn-primary">Search</button>
+    <section class="section-dark">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Directory</span>
+                    <h2 class="font-serif text-4xl md:text-5xl leading-tight">Member Laboratories</h2>
                 </div>
+                <a href="apply.html" class="btn mt-6 md:mt-0">Apply for Accreditation</a>
             </div>
 
-            <div class="card" style="margin-bottom: 1.5rem;"
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;"
-                    <div>
-                        <h3 class="quick-link-title">BioGem Lab</h3>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.25rem;"><strong>Location:</strong> Luoyang, Henan, China</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.25rem;"><strong>Certification:</strong> ILDA-2026-001</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.25rem;"><strong>Certified Since:</strong> June 2026</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.25rem;"><strong>Services:</strong> Life diamond manufacturing with full traceability documentation</p>
-                    </div>
-                    <div style="text-align: right; flex-shrink: 0;"
-                        <div style="display: inline-block; background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;"
-                            Active
-                        </div>
-                    </div>
-                </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Laboratory</th>
+                            <th>Location</th>
+                            <th>Accreditation</th>
+                            <th>Services</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Silmaril Diamonds</td>
+                            <td>New Zealand</td>
+                            <td>Full (ILDA-2024-001)</td>
+                            <td>Full lifecycle, certification</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>BioGem Lab</td>
+                            <td>China (Luoyang)</td>
+                            <td>Full (ILDA-2025-003)</td>
+                            <td>HPHT synthesis, extraction</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Heart In Diamond</td>
+                            <td>United States</td>
+                            <td>Provisional (ILDA-2025-005)</td>
+                            <td>Hair and ash synthesis</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Eterneva</td>
+                            <td>United States (Austin)</td>
+                            <td>Under Review</td>
+                            <td>Ash-to-diamond services</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>LONITÉ</td>
+                            <td>Switzerland</td>
+                            <td>Under Review</td>
+                            <td>Memorial diamonds, cremation</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Saint Diamonds</td>
+                            <td>Poland</td>
+                            <td>Under Review</td>
+                            <td>Memorial diamond synthesis</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <div class="card" style="text-align: center; padding: 3rem;"
-                <p style="color: var(--ilda-gray);"
-                    More laboratories are completing certification. Check back soon for updates.
-                </p>
+            <div class="card mt-16">
+                <div class="card-title">Understanding Accreditation Status</div>
+                <p class="card-text"><strong>Full Accreditation:</strong> The laboratory has completed all four pillars of the ILDA audit and maintains quarterly compliance reporting. Certificates issued carry full ILDA-backed guarantees.</p>
+                <p class="card-text"><strong>Provisional Accreditation:</strong> The laboratory has passed initial audits but is within its first 12-month evaluation period. Full accreditation is granted after sustained compliance.</p>
+                <p class="card-text"><strong>Under Review:>/strong> The laboratory has submitted an application and is undergoing the ILDA audit process. No certificates may be issued until accreditation is granted.</p>
             </div>
         </div>
     </section>
 
     <div id="ilda-footer"></div>
 
-  <script src="/assets/js/ilda-nav.js"></script>
+    <script src="../assets/js/ilda-nav.js"></script>
 </body>
 </html>
