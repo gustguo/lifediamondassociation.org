@@ -421,7 +421,7 @@ body {
   cursor: pointer;
 }
 
-/* Hero with diamond-inspired deep gradient */
+/* Hero with real diamond image */
 .hero {
   position: relative;
   width: 100%;
@@ -430,25 +430,13 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: 
-    radial-gradient(ellipse at 20% 50%, rgba(40,35,30,0.4) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(30,35,40,0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(25,20,30,0.4) 0%, transparent 50%),
-    linear-gradient(135deg, #0a0a0a 0%, #111111 25%, #0d0d0d 50%, #131313 75%, #0a0a0a 100%);
+  background: url('../img/diamonds_scattered.jpg') center/cover no-repeat;
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(200,180,140,0.03) 0%, transparent 40%),
-    radial-gradient(circle at 75% 75%, rgba(180,160,120,0.02) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(150,140,110,0.02) 0%, transparent 30%);
-  animation: heroShimmer 8s ease-in-out infinite;
-}
-@keyframes heroShimmer {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  background: linear-gradient(to bottom, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.65) 50%, rgba(10,10,10,0.75) 100%);
 }
 .hero-bg {
   position: absolute;
@@ -495,21 +483,11 @@ body {
   .section-charcoal { padding: 8rem 4rem; }
 }
 
-/* Editorial image with crystalline texture - diamond rough aesthetic */
+/* Editorial image with real diamonds */
 .editorial-img {
   position: relative;
   min-height: 600px;
-  background: 
-    /* crystalline facet highlights */
-    linear-gradient(145deg, transparent 48%, rgba(200,185,150,0.06) 49%, rgba(200,185,150,0.06) 51%, transparent 52%),
-    linear-gradient(215deg, transparent 48%, rgba(180,165,130,0.04) 49%, rgba(180,165,130,0.04) 51%, transparent 52%),
-    linear-gradient(325deg, transparent 48%, rgba(200,185,150,0.05) 49%, rgba(200,185,150,0.05) 51%, transparent 52%),
-    /* depth layers */
-    radial-gradient(ellipse at 30% 40%, rgba(45,42,38,0.7) 0%, transparent 55%),
-    radial-gradient(ellipse at 70% 60%, rgba(38,40,45,0.6) 0%, transparent 55%),
-    radial-gradient(ellipse at 50% 20%, rgba(50,45,40,0.5) 0%, transparent 40%),
-    /* base dark gradient */
-    linear-gradient(165deg, #161616 0%, #111111 25%, #141414 50%, #0f0f0f 75%, #131313 100%);
+  background: url('../img/diamonds_row.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,40 +497,13 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    /* scattered crystal sparkles */
-    radial-gradient(circle at 25% 30%, rgba(220,200,160,0.06) 0%, transparent 3px),
-    radial-gradient(circle at 75% 25%, rgba(210,190,150,0.04) 0%, transparent 2px),
-    radial-gradient(circle at 60% 75%, rgba(230,210,170,0.05) 0%, transparent 4px),
-    radial-gradient(circle at 35% 70%, rgba(200,185,140,0.03) 0%, transparent 2px),
-    radial-gradient(circle at 85% 60%, rgba(220,200,160,0.04) 0%, transparent 3px),
-    radial-gradient(circle at 15% 55%, rgba(210,195,155,0.05) 0%, transparent 2px);
-  animation: crystalShimmer 6s ease-in-out infinite;
-}
-.editorial-img::after {
-  content: '';
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: 
-    linear-gradient(135deg, rgba(200,185,150,0.1) 0%, transparent 50%),
-    linear-gradient(315deg, rgba(180,165,130,0.08) 0%, transparent 50%);
-  transform: rotate(45deg);
-  border: 1px solid rgba(200,185,150,0.08);
-  box-shadow: 
-    0 0 60px rgba(200,185,150,0.05),
-    inset 0 0 30px rgba(200,185,150,0.03);
-}
-@keyframes crystalShimmer {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  background: linear-gradient(135deg, rgba(245,245,245,0.1) 0%, transparent 50%);
 }
 .editorial-img img {
   display: none;
 }
 @media (max-width: 768px) {
   .editorial-img { min-height: 400px; }
-  .editorial-img::after { width: 80px; height: 80px; }
 }
 .editorial-img .frame-accent {
   position: absolute;
@@ -561,7 +512,8 @@ body {
   width: 12rem;
   height: 12rem;
   border: 1px solid var(--color-black);
-  z-index: 0;
+  z-index: 2;
+  pointer-events: none;
 }
 .section-dark .editorial-img .frame-accent,
 .section-charcoal .editorial-img .frame-accent {
