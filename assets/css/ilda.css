@@ -864,6 +864,16 @@ body {
   height: 1.25rem;
 }
 
+/* Dark variant for light backgrounds */
+.link-arrow-dark {
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+.link-arrow-dark:hover {
+  color: var(--color-gray);
+  border-color: var(--color-gray);
+}
+
 /* Table */
 .table-wrap { overflow-x: auto; }
 table {
