@@ -17,7 +17,7 @@
     brand: 'ILDA',
     desc: 'International Life Diamond Association — Independent certification and traceability standards for the life diamond industry.',
     hq: 'Headquarters',
-    address: ['11 Mody Road, Tsim Sha Tsui', 'Kowloon, Hong Kong SAR', 'China', 'info@lifediamondassociation.org'],
+    address: ['info@lifediamondassociation.org'],
     docs: 'Documentation',
     docLinks: [
       { label: 'Laboratory Guidelines', href: '#' },
