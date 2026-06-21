@@ -483,6 +483,23 @@ body {
   .section-charcoal { padding: 8rem 4rem; }
 }
 
+/* Dark section links — override browser default blue/purple */
+.section-dark a,
+.section-charcoal a {
+  color: var(--color-gray);
+  text-decoration-color: var(--color-gray);
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+.section-dark a:hover,
+.section-charcoal a:hover,
+.section-dark a:active,
+.section-charcoal a:active,
+.section-dark a:visited,
+.section-charcoal a:visited {
+  color: var(--color-light-gray);
+  text-decoration-color: var(--color-light-gray);
+}
+
 /* Editorial image with real diamonds */
 .editorial-img {
   position: relative;

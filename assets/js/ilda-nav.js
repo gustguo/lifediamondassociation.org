@@ -1,7 +1,7 @@
 (function() {
   var navData = {
     logo: 'ILDA',
-    sub: 'International',
+    sub: 'Life Diamond Association',
     links: [
       { label: 'About', href: 'mission.html' },
       { label: 'Standards', href: 'traceability.html' },
