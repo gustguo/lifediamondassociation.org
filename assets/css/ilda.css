@@ -515,8 +515,10 @@ body {
 /* Editorial image with real diamonds */
 .editorial-img {
   position: relative;
-  min-height: 600px;
+  min-height: 480px;
   background: url('../img/diamonds_row.jpg') center/cover no-repeat;
+  border-radius: 2px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
   display: flex;
   align-items: center;
   justify-content: center;
