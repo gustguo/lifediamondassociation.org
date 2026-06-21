@@ -3,12 +3,12 @@
     logo: 'ILDA',
     sub: 'International',
     links: [
-      { label: 'About', href: 'about/mission.html' },
-      { label: 'Standards', href: 'standards/traceability.html' },
+      { label: 'About', href: 'mission.html' },
+      { label: 'Standards', href: 'traceability.html' },
       { label: 'Registry', href: 'index.html#registry' },
-      { label: 'Membership', href: 'membership/directory.html' },
-      { label: 'News', href: 'news/index.html' },
-      { label: 'Education', href: 'education/consumer-guide.html' },
+      { label: 'Membership', href: 'directory.html' },
+      { label: 'News', href: 'news.html' },
+      { label: 'Education', href: 'consumer-guide.html' },
       { label: 'Contact', href: 'contact.html' }
     ]
   };
@@ -23,7 +23,7 @@
       { label: 'Laboratory Guidelines', href: '#' },
       { label: 'Consumer Rights Charter', href: '#' },
       { label: 'Dispute Resolution', href: '#' },
-      { label: 'Press & Media', href: 'news/index.html' }
+      { label: 'Press & Media', href: 'news.html' }
     ],
     copy: '© 2026 International Life Diamond Association. All rights reserved.',
     legal: ['Privacy Policy', 'Legal Terms']
