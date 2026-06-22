@@ -78,8 +78,8 @@
     '<div class="footer-bottom">' +
       '<p>' + footerData.copy + '</p>' +
       '<div>' +
-        '<a href="#">' + footerData.legal[0] + '</a>' +
-        '<a href="#">' + footerData.legal[1] + '</a>' +
+        '<a href="privacy-policy.html">' + footerData.legal[0] + '</a>' +
+        '<a href="legal-terms.html">' + footerData.legal[1] + '</a>' +
       '</div>' +
     '</div>' +
     '</div></footer>';
