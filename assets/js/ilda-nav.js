@@ -64,21 +64,8 @@
     '<div>' +
       '<span class="footer-brand">' + footerData.brand + '</span>' +
       '<p class="footer-desc">' + footerData.desc + '</p>' +
+      '<p class="footer-email"><a href="mailto:info@lifediamondassociation.org">info@lifediamondassociation.org</a></p>' +
     '</div>' +
-    '<div>' +
-      '<h4 class="footer-title">' + footerData.hq + '</h4>' +
-      '<address class="not-italic" style="font-size:0.875rem;color:#d1d5db;font-weight:300;line-height:2;">';
-  
-  footerData.address.forEach(function(line, i) {
-    if (line.indexOf('@') > 0) {
-      footerHTML += '<a href="mailto:' + line + '" style="color:#d1d5db;text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color=\'#fff\'" onmouseout="this.style.color=\'#d1d5db\'">' + line + '</a>';
-    } else {
-      footerHTML += line;
-    }
-    if (i < footerData.address.length - 1) footerHTML += '<br>';
-  });
-  
-  footerHTML += '</address></div>' +
     '<div>' +
       '<h4 class="footer-title">' + footerData.docs + '</h4>' +
       '<ul class="footer-links">';

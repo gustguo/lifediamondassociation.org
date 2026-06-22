@@ -647,7 +647,7 @@ body {
   margin-bottom: 6rem;
 }
 @media (min-width: 768px) {
-  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 2fr 1fr; gap: 6rem; }
 }
 .footer-brand {
   font-family: var(--font-serif);
@@ -663,6 +663,19 @@ body {
   font-weight: 300;
   line-height: 1.75;
   max-width: 20rem;
+}
+.footer-email {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+.footer-email a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+.footer-email a:hover {
+  color: var(--color-white);
 }
 .footer-title {
   font-size: 0.65rem;
