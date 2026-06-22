@@ -326,15 +326,18 @@ body {
   position: fixed;
   width: 100%;
   z-index: 50;
-  mix-blend-mode: difference;
   top: 0;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(250, 250, 250, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 @media (min-width: 1024px) {
-  .nav { padding: 1.5rem 4rem; }
+  .nav { padding: 1.25rem 4rem; }
 }
 
 .nav-logo {
@@ -342,7 +345,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 .nav-logo .font-serif {
   font-size: 1.875rem;
@@ -384,7 +387,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-weight: 300;
-  color: var(--color-white);
+  color: var(--color-black);
   text-decoration: none;
 }
 
@@ -392,7 +395,7 @@ body {
   display: block;
   background: none;
   border: none;
-  color: var(--color-white);
+  color: var(--color-black);
   cursor: pointer;
   padding: 0.5rem;
 }
