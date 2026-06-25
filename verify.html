@@ -804,11 +804,9 @@
         if(token)payload.cf_token=token;
 
         var displayId=code||igi;
-
-        fetch('https://ilda-api.quanyunat2010.workers.dev/api/verify',{
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify(payload)
+        fetch('https://lo.lightmark.cn/api/crm/v1/qingsijie/logs?id='+code,{
+            method:'GET',
+            headers:{'Content-Type':'application/json','Accept-Language':'en-US'}
         })
             .then(function(res){return res.json();})
             .then(function(res){
