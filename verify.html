@@ -522,12 +522,14 @@
             justify-content: center;
             align-items: center;
             padding: 1.5rem;
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
         }
         .modal.active { display: flex; }
         .modal img, .modal video { max-width: 100%; max-height: 88vh; object-fit: contain; }
-        .modal video { width: 100%; background: #000; }
+        .modal video { width: 100%; max-height: 85vh; background: #000; }
         .modal .close {
-            position: absolute; top: 22px; right: 24px;
+            position: fixed; top: max(22px, env(safe-area-inset-top, 22px)); right: 24px;
             width: 42px; height: 42px;
             border: 1px solid var(--color-hairline);
             border-radius: 50%;
@@ -535,6 +537,7 @@
             color: var(--gold-soft); font-size: 1.5rem;
             cursor: pointer; background: transparent;
             transition: border-color 0.2s;
+            -webkit-tap-highlight-color: transparent;
         }
         .modal .close:hover { border-color: var(--gold); }
 
@@ -545,6 +548,10 @@
             .node { grid-template-columns: 64px 1fr; }
             .tl-card { padding-left: 1.25rem; }
             .att { width: 84px; height: 84px; }
+            .modal { padding: 0.75rem; }
+            .modal img, .modal video { max-height: 75vh; }
+            .modal .close { right: 12px; width: 38px; height: 38px; font-size: 1.25rem; }
+            #pdfViewer { width: 100vw !important; height: 100vh !important; }
         }
     </style>
 </head>
@@ -1013,6 +1020,21 @@
     }
 
     /* ===================== media modal ===================== */
+    var _scrollY=0;
+    function lockBody(){
+        _scrollY=window.scrollY;
+        document.body.style.position='fixed';
+        document.body.style.top='-'+_scrollY+'px';
+        document.body.style.width='100%';
+        document.body.style.overflow='hidden';
+    }
+    function unlockBody(){
+        document.body.style.position='';
+        document.body.style.top='';
+        document.body.style.width='';
+        document.body.style.overflow='';
+        window.scrollTo(0,_scrollY);
+    }
     function openImageModal(u){
         if(!u)return;
         var modal=document.getElementById('modal');
@@ -1023,7 +1045,7 @@
         pdf.style.display='none';pdf.src='';
         img.style.display='block';img.src=u;
         modal.classList.add('active');
-        document.body.style.overflow='hidden';
+        lockBody();
     }
 
     function bindAttachmentEvents(){
@@ -1041,7 +1063,7 @@
                 vid.style.display='block';
                 vid.src=v;
                 modal.classList.add('active');
-                document.body.style.overflow='hidden';
+                lockBody();
                 vid.onloadedmetadata=function(){vid.play().catch(function(){});};
             });
         });
@@ -1058,7 +1080,7 @@
         var pdf=document.getElementById('pdfViewer');
         vid.pause();vid.src='';img.src='';pdf.src='';
         modal.classList.remove('active');
-        document.body.style.overflow='';
+        unlockBody();
     }
     document.getElementById('closeModal').addEventListener('click',closeModal);
     document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
